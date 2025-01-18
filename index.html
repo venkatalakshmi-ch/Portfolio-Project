@@ -1,0 +1,941 @@
+<html lang="en" class="sr">
+    <head>
+        <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style cssr-id="vueuc/binder">
+        .v-binder-follower-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 0;
+        pointer-events: none;
+        z-index: auto;
+        }
+
+        .v-binder-follower-content {
+        position: absolute;
+        z-index: auto;
+        }
+
+        .v-binder-follower-content > * {
+        pointer-events: all;
+        }
+        </style>
+        <style cssr-id="n-global">body {
+
+        margin: 0;
+        font-size: 14px;
+        font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        line-height: 1.6;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+
+        }
+
+        body input {
+
+        font-family: inherit;
+        font-size: inherit;
+        
+        }
+        </style>
+        <style cssr-id="n-popover">.n-popover {
+
+        transition:
+        box-shadow .3s var(--n-bezier),
+        background-color .3s var(--n-bezier),
+        color .3s var(--n-bezier);
+        position: relative;
+        font-size: var(--n-font-size);
+        color: var(--n-text-color);
+        box-shadow: var(--n-box-shadow);
+        word-break: break-word;
+        
+        }
+
+        .n-popover > .n-scrollbar {
+
+        height: inherit;
+        max-height: inherit;
+        
+        }
+
+        .n-popover:not(.n-popover--raw) {
+
+        background-color: var(--n-color);
+        border-radius: var(--n-border-radius);
+        
+        }
+
+        .n-popover:not(.n-popover--raw):not(.n-popover--scrollable):not(.n-popover--show-header-or-footer) {
+        padding: var(--n-padding);
+        }
+
+        .n-popover .n-popover__header {
+
+        padding: var(--n-padding);
+        border-bottom: 1px solid var(--n-divider-color);
+        transition: border-color .3s var(--n-bezier);
+        
+        }
+
+        .n-popover .n-popover__footer {
+
+        padding: var(--n-padding);
+        border-top: 1px solid var(--n-divider-color);
+        transition: border-color .3s var(--n-bezier);
+        
+        }
+
+        .n-popover.n-popover--scrollable .n-popover__content, .n-popover.n-popover--show-header-or-footer .n-popover__content {
+
+        padding: var(--n-padding);
+        
+        }
+
+        .n-popover-shared {
+
+        transform-origin: inherit;
+        
+        }
+
+        .n-popover-shared .n-popover-arrow-wrapper {
+
+        position: absolute;
+        overflow: hidden;
+        pointer-events: none;
+        
+        }
+
+        .n-popover-shared .n-popover-arrow-wrapper .n-popover-arrow {
+
+        transition: background-color .3s var(--n-bezier);
+        position: absolute;
+        display: block;
+        width: calc(var(--n-arrow-height) * 1.414);
+        height: calc(var(--n-arrow-height) * 1.414);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .12);
+        transform: rotate(45deg);
+        background-color: var(--n-color);
+        pointer-events: all;
+        
+        }
+
+        .n-popover-shared.popover-transition-enter-from, .n-popover-shared.popover-transition-leave-to {
+
+        opacity: 0;
+        transform: scale(.85);
+        
+        }
+
+        .n-popover-shared.popover-transition-enter-to, .n-popover-shared.popover-transition-leave-from {
+
+        transform: scale(1);
+        opacity: 1;
+        
+        }
+
+        .n-popover-shared.popover-transition-enter-active {
+
+        transition:
+        box-shadow .3s var(--n-bezier),
+        background-color .3s var(--n-bezier),
+        color .3s var(--n-bezier),
+        opacity .15s var(--n-bezier-ease-out),
+        transform .15s var(--n-bezier-ease-out);
+        
+        }
+
+        .n-popover-shared.popover-transition-leave-active {
+
+        transition:
+        box-shadow .3s var(--n-bezier),
+        background-color .3s var(--n-bezier),
+        color .3s var(--n-bezier),
+        opacity .15s var(--n-bezier-ease-in),
+        transform .15s var(--n-bezier-ease-in);
+        
+        }
+
+        [v-placement="top-start"] > .n-popover-shared {
+
+        margin-bottom: var(--n-space);
+        
+        }
+
+        [v-placement="top-start"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-bottom: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top-start"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="top-start"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        top: 100%;
+        bottom: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top-start"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        top: calc(var(--n-arrow-height) * 1.414 / -2);
+        left: calc(var(--n-arrow-offset) - var(--v-offset-left));
+        
+        }
+
+        [v-placement="top"] > .n-popover-shared {
+
+        margin-bottom: var(--n-space);
+        
+        }
+
+        [v-placement="top"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-bottom: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="top"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        top: 100%;
+        bottom: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        top: calc(var(--n-arrow-height) * 1.414 / -2);
+        transform: translateX(calc(var(--n-arrow-height) * 1.414 / -2)) rotate(45deg);
+        left: 50%;
+        
+        }
+
+        [v-placement="top-end"] > .n-popover-shared {
+
+        margin-bottom: var(--n-space);
+        
+        }
+
+        [v-placement="top-end"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-bottom: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top-end"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="top-end"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        top: 100%;
+        bottom: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="top-end"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        top: calc(var(--n-arrow-height) * 1.414 / -2);
+        right: calc(var(--n-arrow-offset) + var(--v-offset-left));
+        
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared {
+
+        margin-top: var(--n-space);
+        
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-top: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        bottom: 100%;
+        top: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        bottom: calc(var(--n-arrow-height) * 1.414 / -2);
+        left: calc(var(--n-arrow-offset) - var(--v-offset-left));
+        
+        }
+
+        [v-placement="bottom"] > .n-popover-shared {
+
+        margin-top: var(--n-space);
+        
+        }
+
+        [v-placement="bottom"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-top: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="bottom"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        bottom: 100%;
+        top: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        bottom: calc(var(--n-arrow-height) * 1.414 / -2);
+        transform: translateX(calc(var(--n-arrow-height) * 1.414 / -2)) rotate(45deg);
+        left: 50%;
+        
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared {
+
+        margin-top: var(--n-space);
+        
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-top: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        bottom: 100%;
+        top: auto;
+        height: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        bottom: calc(var(--n-arrow-height) * 1.414 / -2);
+        right: calc(var(--n-arrow-offset) + var(--v-offset-left));
+        
+        }
+
+        [v-placement="left-start"] > .n-popover-shared {
+
+        margin-right: var(--n-space);
+        
+        }
+
+        [v-placement="left-start"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-right: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left-start"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="left-start"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left-start"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        left: calc(var(--n-arrow-height) * 1.414 / -2);
+        top: calc(var(--n-arrow-offset-vertical) - var(--v-offset-top));
+        
+        }
+
+        [v-placement="left"] > .n-popover-shared {
+
+        margin-right: var(--n-space);
+        
+        }
+
+        [v-placement="left"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-right: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="left"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        left: calc(var(--n-arrow-height) * 1.414 / -2);
+        transform: translateY(calc(var(--n-arrow-height) * 1.414 / -2)) rotate(45deg);
+        top: 50%;
+        
+        }
+
+        [v-placement="left-end"] > .n-popover-shared {
+
+        margin-right: var(--n-space);
+        
+        }
+
+        [v-placement="left-end"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-right: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left-end"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="left-end"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="left-end"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        left: calc(var(--n-arrow-height) * 1.414 / -2);
+        bottom: calc(var(--n-arrow-offset-vertical) + var(--v-offset-top));
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared {
+
+        margin-left: var(--n-space);
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-left: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        right: calc(var(--n-arrow-height) * 1.414 / -2);
+        top: calc(var(--n-arrow-offset-vertical) - var(--v-offset-top));
+        
+        }
+
+        [v-placement="right"] > .n-popover-shared {
+
+        margin-left: var(--n-space);
+        
+        }
+
+        [v-placement="right"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-left: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="right"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        right: calc(var(--n-arrow-height) * 1.414 / -2);
+        transform: translateY(calc(var(--n-arrow-height) * 1.414 / -2)) rotate(45deg);
+        top: 50%;
+        
+        }
+
+        [v-placement="right-end"] > .n-popover-shared {
+
+        margin-left: var(--n-space);
+        
+        }
+
+        [v-placement="right-end"] > .n-popover-shared.n-popover-shared--show-arrow {
+
+        margin-left: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right-end"] > .n-popover-shared.n-popover-shared--overlap {
+
+        margin: 0;
+        
+        }
+
+        [v-placement="right-end"] > .n-popover-shared > .n-popover-arrow-wrapper {
+
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: auto;
+        width: var(--n-space-arrow);
+        
+        }
+
+        [v-placement="right-end"] > .n-popover-shared > .n-popover-arrow-wrapper .n-popover-arrow {
+
+        right: calc(var(--n-arrow-height) * 1.414 / -2);
+        bottom: calc(var(--n-arrow-offset-vertical) + var(--v-offset-top));
+        
+        }
+
+        [v-placement="right-start"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        top: calc(max(calc((var(--v-target-height, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset-vertical)) - var(--v-offset-top));
+        }
+
+        [v-placement="left-start"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        top: calc(max(calc((var(--v-target-height, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset-vertical)) - var(--v-offset-top));
+        }
+
+        [v-placement="top-end"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        right: calc(max(calc((var(--v-target-width, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset)) + var(--v-offset-left));
+        }
+
+        [v-placement="bottom-end"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        right: calc(max(calc((var(--v-target-width, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset)) + var(--v-offset-left));
+        }
+
+        [v-placement="right-end"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        bottom: calc(max(calc((var(--v-target-height, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset-vertical)) + var(--v-offset-top));
+        }
+
+        [v-placement="left-end"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        bottom: calc(max(calc((var(--v-target-height, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset-vertical)) + var(--v-offset-top));
+        }
+
+        [v-placement="top-start"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        left: calc(max(calc((var(--v-target-width, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset)) - var(--v-offset-left));
+        }
+
+        [v-placement="bottom-start"] > .n-popover-shared.n-popover-shared--center-arrow .n-popover-arrow {
+        left: calc(max(calc((var(--v-target-width, 0px) - var(--n-arrow-height) * 1.414) / 2), var(--n-arrow-offset)) - var(--v-offset-left));
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="index.css">
+        <title>Portfolio - Lakshmi CH</title>
+        <!-- <link rel="icon" type="image/x-icon" href=".png"> -->
+    </head>
+    <body style="height: 100%;">
+        <header class="header sticky">
+        <a href="#home" class="portfolio-logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-bar-icone"></i>
+        <nav class="navbar-container">
+            <a href="#home" class="">Home</a>
+            <a href="#about" class="">About</a>
+            <a href="#skills" class="">Skills</a>
+            <a href="#services" class="active">Services</a>
+            <a href="#projects" class="">Projects</a>
+            <a href="#certificates" class="">Certificates</a>
+            <a href="#contact" class="">Contact</a>
+        </nav>
+        </header>
+
+        <section class="home" id="home">
+        <div class="home-container" data-sr-id="0" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <h3>Welcome to My Portfolio</h3>
+            <h1 data-sr-id="31" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">Lakshmi CH</h1>
+            <h1 data-sr-id="32" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">I'm a <span>Data Engineer</span></h1>
+            <p data-sr-id="34" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            Turning Raw Data into Actionable Insights, Building Scalabale Data Pipelines and Solutions.
+            </p>
+            <div class="socila-media-profile">
+            <a href= "https://www.linkedin.com/in/lakshmi-ch-17123a28b/" target="_blank" class="tooltip-icon"><i class="fa-brands fa-linkedin-in"></i>
+                <span class="tooltiptext-icon">LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/venkatalakshmi-ch" target="_blank" class="tooltip-icon"><i class="fa-brands fa-github"></i>
+                <span class="tooltiptext-icon">GitHub</span>
+            </a>
+
+            <a href="mailto:974lakshmi@gmail.com" target="_blank" class="tooltip-icon">
+                <i class="fas fa-envelope"></i>
+                <span class="tooltiptext-icon">Gmail</span>
+            </a>
+            <!-- </div>
+            <a href="./.pdf" download="" class="button">Download Resume <i class="fa-solid fa-download"></i></a>
+        </div> -->
+        <!-- <div class="home-img" data-sr-id="2" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.0286618, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="" alt="myImg">
+        </div> -->
+        </section>
+
+        <section class="about" id="about">
+        <div class="about-container" data-sr-id="35" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>
+            I'm a Data Engineer with a strong foundation in data modeling, ETL processes, SQL, Python, Apache Spark, Hadoop, AWS, and MongoDB. I'm passionate about designing and building scalable data pipelines and architectures to process and analyze large datasets efficiently. I enjoy solving complex data challenges and leveraging analytics to drive informed business decisions. I'm always eager to learn more about data engineering, cloud technologies, and big data frameworks. Currently, I'm looking for opportunities to join a team that values innovation and shares my enthusiasm for data-driven solutions.
+            </p>
+        </div>
+        </section>
+
+        <section id="skills" class="skills">
+        <h2 class="heading">Technical <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-card" data-sr-id="3" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724221811/c573ff5552d6da9a1d28ec4e27cd1445-removebg-preview_w2hkck.png" alt="skills1">
+            <p>HTML</p>
+            </div>
+            <div class="skill-card" data-sr-id="4" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724222003/ac262626eb1e924c85b8b68fe97c2213-removebg-preview_kihgsi.png" alt="skills2">
+            <p>CSS</p>
+            </div>
+            <div class="skill-card" data-sr-id="5" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472150/Bootstrap-removebg-preview_opsbke.png" alt="skills3">
+            <p>Bootstrap</p>
+            </div>
+            <div class="skill-card" data-sr-id="6" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1712139571/10_Best_Cheat_Sheets_That_A_Programmer_Must_Have-removebg-preview_daf4wt.png" alt="skills4">
+            <p>JavaScript</p>
+            </div>
+            <div class="skill-card" data-sr-id="7" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1712150985/Windows_Vista__70-620__Part_1__Install_and_Getting_Started-removebg-preview_dlar2d.png" alt="skills5">
+            <p>React JS</p>
+            </div>
+            <div class="skill-card" data-sr-id="8" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724222161/0c8121171fefa57a22351d1a10e96c2b-removebg-preview_eglfs1.png" alt="skills6">
+            <p>Node JS</p>
+            </div>
+            <div class="skill-card" data-sr-id="9" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724079122/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-removebg-preview_yihadf.png" alt="skills7">
+            <p>Express JS</p>
+            </div>
+            <div class="skill-card" data-sr-id="10" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472150/SQL_Basics___Hands-On_Beginner_SQL_Tutorial_Analyzing_Bike-Sharing-removebg-preview_a0aug6.png" alt="skills8">
+            <p>SQL</p>
+            </div>
+            <div class="skill-card" data-sr-id="11" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472151/MongoDB_affine_l_%C3%A9quilibrage_de_charge_avec_sa_version_2_4_-_Le_Monde_Informatique-removebg-preview_1_ppnpok.png" alt="skills9">
+            <p>MongoDB</p>
+            </div>
+            <div class="skill-card" data-sr-id="12" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472151/download__2_-removebg-preview_sjc7gv.png" alt="skills10">
+            <p>Python</p>
+            </div>
+            <div class="skill-card" data-sr-id="13" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+                <img src="https://res.cloudinary.com/djretqoei/image/upload/v1736291712/12557208_managed_service_for_postgresql_managed_service_for_postgresql_icon_gsabpk.png" alt="skills11">
+                <p>PostgreSQL</p>
+            </div>
+            <div class="skill-card" data-sr-id="14" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.5s, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+                <img src="https://res.cloudinary.com/djretqoei/image/upload/v1736290513/4373217_java_logo_logos_icon_avsrhs.png" alt="skills11">
+                <p>Java</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="service" id="services">
+        <h2 class="heading">My<span> Services</span></h2>
+        <div class="services-container" data-sr-id="14" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>
+                As a web developer, I create dynamic and functional websites using a
+                combination of front-end and back-end technologies. I specialize in
+                building responsive, user-friendly interfaces that enhance the user
+                experience. Whether it’s an e-commerce site, a blog, or a custom web
+                application, I bring ideas to life through code.
+            </p>
+            </div>
+
+            <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>UI Development</h3>
+            <p>
+                UI (User Interface) development focuses on creating the visual
+                elements of a website or application. I specialize in turning design
+                mockups into interactive interfaces using HTML, CSS, and JavaScript.
+                My goal is to ensure that users have a seamless and enjoyable
+                experience while interacting with your product.
+            </p>
+            </div>
+
+            <div class="service-card">
+            <i class="fa-solid fa-palette"></i>
+            <h3>UI Designing</h3>
+            <p>
+                UI design is all about aesthetics and usability. As a UI designer, I
+                craft visually appealing layouts, choose color schemes, and create
+                intuitive navigation. I pay attention to details like typography,
+                spacing, and consistency. My designs aim to enhance the overall look
+                and feel of your digital product.
+            </p>
+            </div>
+        </div>
+        </section>
+
+        <section class="projects" id="projects">
+        <h2 class="heading">My<span> Projects</span></h2>
+        <div class="project-container">
+            <div class="project-card" data-sr-id="15" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709376742/Netflix__Here_s_the_list_of_top_20_trending_movies_series_in_December_dzjeyo.jpg" alt="project1" class="project-image">
+            <div class="project-content">
+                <h4>Netflix Clone</h4>
+                <p>
+                Netflix clone website is created using ReactJS which is the
+                replica of the popular streaming platform - Netflix, complete with
+                similar features and user interface. Username: saira, Password:
+                princess@9
+                </p>
+                <a href="https://reactjsmini.ccbp.tech/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="project-card" data-sr-id="16" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709380062/Free_Vector___E-commerce_round_composition_iyyl6b.jpg" alt="project2" class="project-image">
+            <div class="project-content">
+                <h4>NxT Trendz</h4>
+                <p>
+                NxT Trendx is a E-Commerce website built using ReactJS. It's
+                replica of Flipkart or Amaxon. Username: rahul, Password:
+                rahul@2021
+                </p>
+                <a href="https://babbutrendzz.ccbp.tech/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="project-card" data-sr-id="17" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709380058/Download_Rock_Paper_Scissors_Neon_Icons_for_free_vngpjq.jpg" alt="project3" class="project-image">
+            <div class="project-content">
+                <h4>Rock Paper Scissor</h4>
+                <p>
+                Rock Paper Scissor is an user friendly game developed using
+                ReactJS.
+                </p>
+                <a href="https://babbugames.ccbp.tech/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="project-card" data-sr-id="18" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709380059/%D9%85%D8%A7_%D9%87%D9%8A_%D9%85%D8%B5%D9%81%D9%88%D9%81%D8%A9_%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D9%88%D9%82%D8%AA_%D9%88%D9%83%D9%8A%D9%81_%D8%AA%D8%B3%D8%A7%D8%B9%D8%AF%D9%83_%D8%B9%D9%84%D9%89_%D8%A3%D9%86_%D8%AA%D9%83%D9%88%D9%86_%D8%A3%D9%83%D8%AB%D8%B1_%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9_r6khwk.jpg" alt="project4" class="project-image">
+            <div class="project-content">
+                <h4>Task Managing App</h4>
+                <p>
+                Task Managing App was created using ReactJS which allows user to
+                manage their tasks.
+                </p>
+                <a href="https://taskmanaging.ccbp.tech/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="project-card" data-sr-id="19" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1710001008/Premium_Vector___Jobs_search_recruitment_hiring_employment_find_job_openings_opportunities_for_career_growth_young_unemployed_man_uses_a_magnifying_glass_to_search_for_recruitment_illustration_q77nfg.jpg" alt="project6" class="project-image">
+            <div class="project-content">
+                <h4>Jobby App</h4>
+                <p>
+                Jobby was developed using ReactJS. Jobby app is a job searching
+                platform. Username: rahul, Password: rahul@2021
+                </p>
+                <a href="https://babbucreations.ccbp.tech/login"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+
+            <div class="project-card" data-sr-id="20" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709380071/38833_1_apfnyy.jpg" alt="project7" class="project-image">
+            <div class="project-content">
+                <h4>Food Much</h4>
+                <p>
+                Food Much was built using HTML, CSS, Flex-box. Food Much is a
+                Responsive Food Delivery App.
+                </p>
+                <a href="https://foodhubmunch.ccbp.tech/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="certificates-container" id="certificates">
+        <h2 class="heading">My<span> Certificates</span></h2>
+        <div class="certificates-card">
+            <img src="./images/Screenshot 2025-01-15 184020.png" alt="static" data-sr-id="21" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="./images/Screenshot 2025-01-15 184156.png" alt="responsive" data-sr-id="22" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="./images/Screenshot 2025-01-15 184257.png" alt="dynamic" data-sr-id="23" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <!-- <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476832/JavaScript_Essential_page-0001_hwnz2x.jpg" alt="JS essentials" data-sr-id="24" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;"> -->
+            <!-- <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476830/python_page-0001_ifdpcl.jpg" alt="python" data-sr-id="25" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476843/UNUDSOHOBI_page-0001_ho4v89.jpg" alt="sql" data-sr-id="26" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476833/css_Flexbox_page-0001_dh4ilk.jpg" alt="cssflexbox" data-sr-id="27" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476835/XQGADNWILA_page-0001_am9ppd.jpg" alt="git" data-sr-id="28" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476837/JNQWVFGFDN_page-0001_lydct7.jpg" alt="nodeJS" data-sr-id="29" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <img src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709476841/MTPRJZEPEZ_page-0001_xsbkbi.jpg" alt="reactJS" data-sr-id="30" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;"> -->
+        </div>
+        </section> -->
+
+        <script src="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js" class="scrolling" user-profile="https://topmate.io/embed/profile/prasanya_fullstack_developer?theme=262840" btn-style="{&quot;backgroundColor&quot;:&quot;#59b2f4&quot;,&quot;color&quot;:&quot;#fff&quot;,&quot;border&quot;:&quot;1px solid &quot;, &quot;box-shadow&quot;: &quot;0 0 1rem #59b2f4&quot;}" embed-version="v1" button-text="Let's Connect" position-right="10px" position-bottom="70px" custom-padding="0px" custom-font-size="14px" custom-font-weight="500" custom-width="130px" async="" defer=""></script>
+
+        <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST" data-sr-id="33" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+            <input type="hidden" name="access_key" value="3cfb34e6-b47c-4b51-8254-4f82133d68cd">
+            <div class="input-card">
+            <input type="text" name="name" placeholder="Enter Your Name" required="">
+            <input type="email" name="email" placeholder="Enter Your Mail Id" required="">
+            </div>
+
+            <div class="input-card">
+            <input type="number" placeholder="Enter Your Mobile Number" required="" name="number">
+            <input type="text" name="subject" placeholder="Enter Subject Of The Mail" required="">
+            </div>
+
+            <textarea name="message" cols="30" rows="10" placeholder="Enter Your Message Here..."></textarea>
+            <button type="submit" class="button">Submit</button>
+        </form>
+        </section>
+
+        <footer class="footer">
+        <div class="footer-container">
+            <h2>Copyrights © 2024</h2>
+        </div>
+        <div class="contact-link">
+            <h2>
+            Need a Portfolio Website Like This | Contact
+            <a href="linkedin.com/in/lakshmi-ch-17123a28b" target="_blank" class="tooltip">Lakshmi CH<span class="tooltiptext">LinkedIn</span></a>
+            </h2>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script><div id="profile" data-symbol="shagun" class="connect-widget"><div><div class="topmate-profile"><button class="topmate-button" style="background-color: rgb(89, 178, 244); color: rgb(255, 255, 255); border: 1px solid; box-shadow: rgb(89, 178, 244) 0px 0px 1rem; right: 10px; bottom: 70px; padding: 0px; font-size: 14px; font-weight: 500; width: 130px;">Let's Connect</button></div></div></div><link href="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-style.css" rel="stylesheet">
+
+        <script src="index.js"></script>
+    
+
+        <div id="profile" data-symbol="shagun" class="connect-widget"><div><div class="topmate-profile"><button class="topmate-button" style="background-color: rgb(89, 178, 244); color: rgb(255, 255, 255); border: 1px solid; box-shadow: rgb(89, 178, 244) 0px 0px 1rem; right: 10px; bottom: 70px; padding: 0px; font-size: 14px; font-weight: 500; width: 130px;">Let's Connect</button></div></div></div><link href="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-style.css" rel="stylesheet"></body></html>
+    </body>
+<div id="select-text-to-keyword" data-v-app="">
+   
+    <section class="fh-w-1 fh=h-1" style="position: fixed; z-index: 2147483647; left: 0px; top: 0px;">
+    </section>
+</div>
+</html>
